@@ -55,7 +55,7 @@ DLLロード時にload(), アンロード時にunload()、その他全ての実�
 #### BOOL load(HGLOBAL h, long len)
 
 DLLロード時に呼ばれ、DLLが存在するディレクトリパスが渡される。
-これは常にパスセパレーター(`\\`)で終わることが保障される。
+これは常にパスセパレーター(`\`)で終わることが保障される。
 
 SHIORI DLLの初期化処理等を行うことが期待される。
 
@@ -63,7 +63,7 @@ hは`GlobalAlloc(GMEM_FIXED, len)`で確保された`len`の長さを持つ`cons
 
 したがって`strncpy(str, (const char*)h, len)`等でコピーできる。
 
-この文字列は`\\0`を末尾に持たないことに注意すべきである。
+この文字列は`\0`を末尾に持たないことに注意すべきである。
 
 hはSHIORI DLL側で`GlobalFree((HGLOBAL)h)`で開放しなければならない。
 
@@ -85,7 +85,7 @@ hは`GlobalAlloc(GMEM_FIXED, *len)`で確保された`*len`の長さを持つ`co
 
 したがって渡されたリクエスト文字列は`strncpy(str, (const char*)h, *len)`等でコピーできる。
 
-この文字列は`\\0`を末尾に持たないことに注意すべきである。
+この文字列は`\0`を末尾に持たないことに注意すべきである。
 
 hはSHIORI DLL側で`GlobalFree((HGLOBAL)h)`で開放しなければならない。
 
@@ -121,7 +121,7 @@ UNIX like OSにおけるSHIORI共有ライブラリはWindowsにおけるSHIORI 
     extern "C" bool unload();
     extern "C" char* request(char* h, long *len);
 
-各関数の仕様に変化はないが、load()のみ、パスセパレータが`\\`から`/`に変更されるであろう。
+各関数の仕様に変化はないが、load()のみ、パスセパレータが`\`から`/`に変更されるであろう。
 
 ### ブラウザ環境におけるSHIORI共有ライブラリ
 
