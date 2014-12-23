@@ -233,3 +233,19 @@
 - capability
 - calendarskinpathlist
 - calendarpluginpathlist
+
+### OnNotifyBrowserInfo
+
+通常NOTIFY
+
+- Reference0: useragent UserAgent
+- Reference1: browser_name ブラウザ名
+- Reference2: browser_version ブラウザバージョン
+- Reference11: engine_name レンダリングエンジン名
+- Reference12: engine_version レンダリングエンジンバージョン
+- Reference21: os_name OS名
+- Reference22: os_version OSバージョン
+- Reference33: device_model デバイスモデル
+- Reference34: device_type デバイスタイプ
+- Reference35: device_vendor デバイスベンダー
+- Reference46: cpu_arch CPUアーキテクチャ
