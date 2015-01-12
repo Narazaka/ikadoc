@@ -116,8 +116,8 @@ h2. 選択肢マーカー変更コマンド
 
 3数値による色指定において解釈不能の物があった場合、rgb(0,0,0)となる。
 
-anchornotselectstyle等でstyleのみを変更した場合、anchornotselectfontcolor等を設定していない場合は全てrgb(0,0,0)となる。
-デフォルトのanchorfontcolor等を使う挙動もまた合理的であるが、SSPの挙動に準拠してこちらの挙動を採用している。
+choicenotselectstyle等でstyleのみを変更した場合、choicenotselectfontcolor等を設定していない場合は全てテキストのcolorとなる。
+デフォルトのchoicefontcolor等を使う挙動はanchorのほうで採用しているが、SSPの挙動を模倣してこちらの挙動を採用している。
 
 この挙動はballoonのdescript.txtの解釈と同一である。
 
