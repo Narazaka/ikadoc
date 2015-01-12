@@ -47,7 +47,19 @@ h3. \l[x,y]
 
 h2. 文字変更コマンド
 
-実装なし
+* \f[name,...]
+* \f[height,...]
+* \f[color,色指定]
+* \f[shadowcolor,色指定]
+* \f[shadowcolor,none]
+* -\f[outline,...]- (実装予定なし)
+* \f[bold,...]
+* \f[italic,...]
+* \f[strike,...]
+* \f[underline,...]
+* -\f[sub,...]-
+* -\f[sup,...]-
+* \f[default]
 
 h2. ウエイトコマンド
 
@@ -76,7 +88,38 @@ h2. 選択肢コマンド
 
 h2. 選択肢マーカー変更コマンド
 
-実装なし
+* \f[cursorstyle,形状]
+* \f[cursorcolor,色指定] \f[cursorbrushcolor,色指定]
+* \f[cursorpencolor,色指定]
+* \f[cursorfontcolor,色指定]
+* -\f[cursormethod,描画方法]- (実装予定なし)
+* \f[cursornotselectstyle,形状]
+* \f[cursornotselectcolor,色指定] \f[cursornotselectbrushcolor,色指定]
+* \f[cursornotselectpencolor,色指定]
+* \f[cursornotselectfontcolor,色指定]
+* -\f[cursornotselectmethod,描画方法]- (実装予定なし)
+* \f[anchorstyle,形状]
+* \f[anchorcolor,色指定]もしくは\f[anchorbrushcolor,色指定]
+* \f[anchorpencolor,色指定]
+* \f[anchorfontcolor,色指定]
+* -\f[anchormethod,描画方法]- (実装予定なし)
+* \f[anchornotselectstyle,形状]
+* \f[anchornotselectcolor,色指定] \f[anchornotselectbrushcolor,色指定]
+* \f[anchornotselectpencolor,色指定]
+* \f[anchornotselectfontcolor,色指定]
+* -\f[anchornotselectmethod,描画方法]- (実装予定なし)
+* -\f[anchorvisitedstyle,形状]- (実装予定なし)
+* -\f[anchorvisitedcolor,色指定] \f[anchorvisitedbrushcolor,色指定]- (実装予定なし)
+* -\f[anchorvisitedpencolor,色指定]- (実装予定なし)
+* -\f[anchorvisitedfontcolor,色指定]- (実装予定なし)
+* -\f[anchorvisitedmethod,描画方法]- (実装予定なし)
+
+3数値による色指定において解釈不能の物があった場合、rgb(0,0,0)となる。
+
+anchornotselectstyle等でstyleのみを変更した場合、anchornotselectfontcolor等を設定していない場合は全てrgb(0,0,0)となる。
+デフォルトのanchorfontcolor等を使う挙動もまた合理的であるが、SSPの挙動に準拠してこちらの挙動を採用している。
+
+この挙動はballoonのdescript.txtの解釈と同一である。
 
 h2. イベントコマンド
 
