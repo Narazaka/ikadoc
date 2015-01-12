@@ -89,7 +89,7 @@ h2. イベントコマンド
 * -\![change,ghost,ゴースト名]-
 * -\v-
 * -\![set,windowstate,stayontop]-
-* -\![set,windowstate,!stayontop]-
+* -<notextile>\![set,windowstate,!stayontop]</notextile>-
 * -\![set,windowstate,minimize]-
 * \![raise,...]
 
